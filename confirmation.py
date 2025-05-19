@@ -75,7 +75,6 @@ padding = 4
 select_index = 0
 
 arrow_image = pg.image.load("assets/sprites/arrow.png").convert_alpha()
-arrow_image_flipped = pg.transform.flip(arrow_image, True, False)
 arrow_y = 0
 arrow_x = 0
 
