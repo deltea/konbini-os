@@ -10,7 +10,7 @@ if not DEV:
     from PIL import Image
 
     # init luma oled
-    serial = spi(port=0, device=0, gpio_DC=25, gpio_RST=27)
+    serial = spi(port=0, device=0, gpio_DC=25, gpio_RST=27, bus_speed_hz=20000000)
     oled = ssd1351(serial_interface=serial, width=128, height=128)
 
 pg.init()
@@ -73,10 +73,6 @@ def draw_rectangle(x, y, width, height, color, rotation=0):
         points.append((x + x_offset, y + y_offset))
 
     pg.draw.polygon(screen, color, points)
-
-
-
-# --------- initialization ---------
 
 
 # --------- game loop ---------
